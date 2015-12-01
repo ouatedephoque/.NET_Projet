@@ -1,0 +1,1 @@
+C:\HEARC\DotNet\Projet\MIDI_Player\MIDI_Player\bin\Debug\MIDI_Player.exe.config
