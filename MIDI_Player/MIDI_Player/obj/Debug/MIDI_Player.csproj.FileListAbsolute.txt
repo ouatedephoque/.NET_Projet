@@ -1,1 +1,14 @@
 C:\HEARC\DotNet\Projet\MIDI_Player\MIDI_Player\bin\Debug\MIDI_Player.exe.config
+C:\HEARC\DotNet\Projet\MIDI_Player\MIDI_Player\bin\Debug\MIDI_Player.exe
+C:\HEARC\DotNet\Projet\MIDI_Player\MIDI_Player\bin\Debug\MIDI_Player.pdb
+C:\HEARC\DotNet\Projet\MIDI_Player\MIDI_Player\obj\Debug\MIDI_Player.csprojResolveAssemblyReference.cache
+C:\HEARC\DotNet\Projet\MIDI_Player\MIDI_Player\obj\Debug\MainWindow.g.cs
+C:\HEARC\DotNet\Projet\MIDI_Player\MIDI_Player\obj\Debug\App.g.cs
+C:\HEARC\DotNet\Projet\MIDI_Player\MIDI_Player\obj\Debug\MIDI_Player_MarkupCompile.cache
+C:\HEARC\DotNet\Projet\MIDI_Player\MIDI_Player\obj\Debug\MIDI_Player_MarkupCompile.lref
+C:\HEARC\DotNet\Projet\MIDI_Player\MIDI_Player\obj\Debug\MainWindow.baml
+C:\HEARC\DotNet\Projet\MIDI_Player\MIDI_Player\obj\Debug\MIDI_Player.g.resources
+C:\HEARC\DotNet\Projet\MIDI_Player\MIDI_Player\obj\Debug\MIDI_Player.Properties.Resources.resources
+C:\HEARC\DotNet\Projet\MIDI_Player\MIDI_Player\obj\Debug\MIDI_Player.csproj.GenerateResource.Cache
+C:\HEARC\DotNet\Projet\MIDI_Player\MIDI_Player\obj\Debug\MIDI_Player.exe
+C:\HEARC\DotNet\Projet\MIDI_Player\MIDI_Player\obj\Debug\MIDI_Player.pdb

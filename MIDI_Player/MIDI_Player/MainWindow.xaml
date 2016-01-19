@@ -5,8 +5,128 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MIDI_Player"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="400" Width="500">
+
+    <Window.CommandBindings>
+        <CommandBinding
+            Command="ApplicationCommands.Close"
+            Executed="CloseCommandHandler"/>
+    </Window.CommandBindings>
+
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="23*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="191*"/>
+            <RowDefinition Height="19*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="24*"/>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="109*"/>
+            <ColumnDefinition Width="37*"/>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="42*"/>
+            <ColumnDefinition Width="109*"/>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="25*"/>
+        </Grid.ColumnDefinitions>
+        <Menu IsMainMenu="True" Margin="0,0,0,4" Grid.ColumnSpan="9" >
+            <MenuItem Header="_File">
+                <MenuItem Header="_Ouvrir un fichier MIDI" Click="MenuItem_Click_Open" />
+                <MenuItem Header="_Play" Click="buttonPlay_Click" />
+                <MenuItem Header="_Pause" Click="buttonPlay_Click"  />
+                <MenuItem Header="_Stop" Click="buttonStop_Click"  />
+                <Separator />
+                <MenuItem Header="_Avancer" />
+                <MenuItem Header="_Reculer" />
+                <Separator />
+                <MenuItem Header="_Ralentir" />
+                <MenuItem Header="_Accélerer" />
+                <Separator />
+                <MenuItem Header="_Exit" Command="ApplicationCommands.Close" />
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_Aide" />
+                <MenuItem Header="_Informations" />
+            </MenuItem>
+        </Menu>
+        <Label 
+            x:Name="labelFile"
+            Content=""
+            Grid.Column="2"
+            Grid.Row="2"
+            Grid.ColumnSpan="5"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+        />
+        <Slider 
+            x:Name="slider"
+            Grid.Column="2"
+            Grid.Row="3"
+            VerticalAlignment="Center" Grid.ColumnSpan="5" Height="22" Margin="0,10,0,8"
+        />
+        <Button x:Name="buttonRecule" Grid.Column="1" Grid.Row="3">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="Images/back.png" Width="30" Cursor="Hand"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="buttonAvance" Grid.Column="7" Grid.Row="3">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="Images/after.png" Width="30" Cursor="Hand"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Label 
+            x:Name="labelTimeActual"
+            Content="00:00:00"
+            Grid.Column="2"
+            HorizontalAlignment="Center"
+            Grid.Row="4"
+            VerticalAlignment="Center" Height="26" Margin="6,10,49,14" Width="54"
+        />
+        <Label
+            x:Name="labelTimeStop"
+            Content="00:00:00"
+            Grid.Column="6"
+            HorizontalAlignment="Center"
+            Grid.Row="4"
+            VerticalAlignment="Center" Height="26" Margin="49,10,6,14" Width="54"
+        />
+        <Button x:Name="buttonPlayPause" Grid.Column="3" Grid.Row="4" Click="buttonPlay_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="Images/playPause.png" Cursor="Hand"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button x:Name="buttonStop" Grid.Column="5" Grid.Row="4" Click="buttonStop_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="Images/stop.png" Height="23" Cursor="Hand"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <MediaElement x:Name="mediaElement" />
+        <Canvas 
+            x:Name="gameArea"
+            Grid.ColumnSpan="8"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            Height="197"
+            Margin="3,27,0,-14"
+            Grid.Row="5"
+            VerticalAlignment="Top"
+            Width="441"
+            Grid.RowSpan="2"
+        />
+
     </Grid>
 </Window>
